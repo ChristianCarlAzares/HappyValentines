@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day My Wife ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Valentines.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="main-title">Happy Valentine's Day</h1>
+                <h2 class="subtitle">My Beautiful Wife</h2>
+                <div class="heart-button-container">
+                    <button id="startBtn" class="heart-button">
+                        <span class="button-text">START</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-content">
+                <h2 class="quiz-title">Let's See How Well You Know Me...</h2>
+                
+                <!-- Question 1 -->
+                <div class="question-card active" id="question1">
+                    <p class="question-text">What is my Favorite Color?</p>
+                    <div class="options-grid">
+                        <button class="option-btn" data-answer="Blue">Blue</button>
+                        <button class="option-btn" data-answer="Red">Red</button>
+                        <button class="option-btn" data-answer="Green">Green</button>
+                        <button class="option-btn" data-answer="Yellow">Yellow</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card" id="question2">
+                    <p class="question-text">What are my Hobbies?</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Gaming">
+                            <span>Gaming</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Guitar">
+                            <span>Guitar</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Singing">
+                            <span>Singing</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Reading">
+                            <span>Reading</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Cooking">
+                            <span>Cooking</span>
+                        </label>
+                    </div>
+                    <button class="submit-btn" id="submitHobbies">Submit</button>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card" id="question3">
+                    <p class="question-text">What is my Birthday?</p>
+                    <input type="date" id="birthdayInput" class="date-input">
+                    <button class="submit-btn" id="submitBirthday">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="hearts-burst"></div>
+                <p class="modal-text">Kilalang kilala mo talaga ako asawa ko ahhhhhh alam mo aray koooooooo</p>
+            </div>
+        </div>
+
+        <!-- Timer Screen -->
+        <div id="timerScreen" class="screen">
+            <div class="timer-content">
+                <div class="countdown-circle">
+                    <svg class="countdown-svg" viewBox="0 0 200 200">
+                        <circle class="countdown-bg" cx="100" cy="100" r="90"></circle>
+                        <circle class="countdown-progress" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="countdown-number" id="countdownNumber">5</div>
+                </div>
+                <p class="timer-message">Getting your message ready...</p>
+            </div>
+        </div>
+
+        <!-- Message Screen -->
+        <div id="messageScreen" class="screen">
+            <div class="message-content">
+                <h2 class="message-title">This are my message</h2>
+                <div class="message-box">
+                    <p>My dearest wife,</p>
+                    <p>Every moment with you is a blessing. You make my heart full and my life complete.</p>
+                    <p>I am so grateful for your love, your laughter, and the beautiful life we share together.</p>
+                    <p>Forever yours,</p>
+                    <p class="signature">Your Loving Husband ❤️</p>
+                </div>
+                <button class="next-btn" id="nextBtn">Next</button>
+            </div>
+        </div>
+
+        <!-- Final Screen -->
+        <div id="finalScreen" class="screen">
+            <div class="final-content">
+                <div class="kitten-hearts">
+                    <div class="kitten-heart">
+                        <span class="kitten">🐱</span>
+                        <span class="heart-icon">❤️</span>
+                    </div>
+                    <div class="kitten-heart">
+                        <span class="heart-icon">💕</span>
+                        <span class="kitten">🐱</span>
+                    </div>
+                    <div class="kitten-heart">
+                        <span class="kitten">🐱</span>
+                        <span class="heart-icon">💗</span>
+                    </div>
+                </div>
+                <h2 class="final-question">Will you be my Valentine's date?</h2>
+                <div class="final-buttons">
+                    <button class="yes-btn" id="yesBtn">YES</button>
+                    <button class="no-btn" id="noBtn">NO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Love Declaration -->
+        <div id="loveDeclaration" class="modal">
+            <div class="modal-content love-content">
+                <div class="big-hearts"></div>
+                <h1 class="love-text">I LOVE YOU ALWAYS</h1>
+                <div class="sparkles"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Valentines.js"></script>
+</body>
+</html>
